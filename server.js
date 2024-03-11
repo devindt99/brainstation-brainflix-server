@@ -1,6 +1,12 @@
 const express = require('express');
 const app = express();
 app.use(express.static('public'));
+const cors = require('cors');
+
+// Enable CORS for all routes and origins
+app.use(cors());
+
+// Your routes and other middleware
 
 // Middleware for logging
 app.use((req, res, next) => {
